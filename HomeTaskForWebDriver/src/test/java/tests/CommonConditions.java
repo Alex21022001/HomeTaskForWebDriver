@@ -23,6 +23,7 @@ public class CommonConditions {
         driver.manage().window().maximize();
     }
 
+
     @After
     public void close() {
         driver.quit();
