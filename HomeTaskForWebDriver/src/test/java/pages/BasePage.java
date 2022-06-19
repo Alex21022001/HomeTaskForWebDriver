@@ -31,4 +31,6 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+
 }

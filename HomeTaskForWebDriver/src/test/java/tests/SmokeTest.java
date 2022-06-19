@@ -1,15 +1,17 @@
 package tests;
 
 import data.Data;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import pages.GooglePage;
-
-public class SmokeTest extends CommonConditions{
+/*
+*mvn-Dtest=SmokeTest test
+*/
+public class SmokeTest extends CommonConditions {
     @Test
-    public void goTOGoogleAndSearchImagesVerifyTheirVisibility(){
+    public void goTOGoogleAndSearchImagesVerifyTheirVisibility() {
         GooglePage googlePage = new GooglePage(driver);
-       Assert.assertTrue(googlePage.goToPage(Data.URL)
+        Assertions.assertTrue(googlePage.goToPage(Data.URL)
                 .enterQueryForSearchField(Data.SEARCH_TEXT)
                 .openImagesPage().verifyImageOnPage());
     }
